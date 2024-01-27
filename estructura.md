@@ -6,10 +6,10 @@
 
 2) Feedback:
    - Subject: 30 caracteres
-   - Body: IPFS
+   - Body (IPFS)
    - Puntuación: de 1 a 5.
 
-4) Evidencias:
+4) Evidencias (IPFS)
 5) Txid / External reference / contract address
 6) Fecha actual (de la transacción por la que se publica el feedback)
 ? 7) Importe
@@ -20,5 +20,13 @@
 
 # Funciones del contrato inteligente
 
+1) Publicar reseña
+2) Tipear
+3) Withdraw tip
+4) Busqueda por: ID; usuario
 
+# Mejoras
+
+1) Modificar reseña
+   
 
