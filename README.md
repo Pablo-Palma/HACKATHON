@@ -11,4 +11,8 @@ Con nuestro servicio tratamos de resolver el problema de la reputación online.
 
 Tradicionalmente, la reputación no pertenece a la persona interesada, sino a la entidad que gestiona la web donde se publica. Lo que supone la fragmentación de la reputación (la reputación en eBay es totalmente independiente de la que podamos tener en Airbnb) que implica que su utilidad práctica se ve disminuida.
 
-Con nuestro servicio
+Con nuestro servicio, además, se puede no solo publicar feedback de transacciones con otras personas, sino también con contratos inteligentes. El caso típico es reportar honeypots, wallets drainers o webs que han sido hackeadas y se le ha cambiado el contrato legítimo por uno de los hackers. En estas situaciones, antes de interactuar con un contrato, el usuario puede comprobar su reputación. Y lo más, importante, la comprobación puede ser bien manual, bien automática por el wallet del usuario.
+
+Un ejemplo concreto podría ser una web3. Su equipo de desarrollo pueden publicar un auto-feedback -en principio positivo-, depositarse a ellos mismo un "tip" -como colateral- y someterse a una DAO de arbitraje. En la práctica funciona como garantía de que su contrato no tiene bugs, y también de que van a actuar de buena fe, pues, en caso contrario la DAO de arbitraje destinaria su auto-tip a los eventuales usuarios afectados.
+
+Por otro lado, en la que un actor malicioso sustituye el contrato con el que el usuario interactúa con la finalidad de apoderarse de sus fondos. Si el usuario comprueba la reputación del nuevo contrato verá diversas banderas rojas: que tiene recientes comentarios negativos, que los comentarios son solo nuevos, o que no tiene "colateral" del equipo de desarrollo.
