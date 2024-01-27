@@ -7,7 +7,9 @@ En un fin de semana tuvimos que desarrollar un producto mínimo viable de nuestr
 Creemos en un mundo descentralizado donde la información de la blockchain puede ayudarnos a tomar mejores decisiones en nuestras relaciones económicas onchain y offchain. Todo ello gracias a la persistencia de la información y trazabilidad. Así como a la posibilidad de que los servicios que creamos pueden seguir funcionando en el futuro.
 
 # El servicio de onchain feedback
-Con nuestro servicio tratamos de resolver el problema de la reputación online.
+Con nuestro servicio tratamos de resolver el problema de la reputación y reseñas online.
+
+El principal problema son las reseñas falsas, por un lado, y por otro que la web donde las publicas borre las que le perjudican. Publicándolas en un blockchain conseguimos transparencia y trazabilidad, lo que garantiza que no se puedan borrar.
 
 Tradicionalmente, la reputación no pertenece a la persona interesada, sino a la entidad que gestiona la web donde se publica. Lo que supone la fragmentación de la reputación (la reputación en eBay es totalmente independiente de la que podamos tener en Airbnb) que implica que su utilidad práctica se ve disminuida.
 
