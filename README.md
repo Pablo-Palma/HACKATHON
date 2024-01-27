@@ -20,7 +20,7 @@ Un ejemplo concreto podría ser una web3. Su equipo de desarrollo pueden publica
 Por otro lado, en la que un actor malicioso sustituye el contrato con el que el usuario interactúa con la finalidad de apoderarse de sus fondos. Si el usuario comprueba la reputación del nuevo contrato verá diversas banderas rojas: que tiene recientes comentarios negativos, que los comentarios son solo nuevos, o que no tiene "colateral" del equipo de desarrollo.
 
 # Modelo de negocio
-El modelo de negocio consiste en cobrar un porcentaje de comisión de los "tips" que se dejen.
+El modelo de negocio consiste en cobrar un porcentaje de comisión de los "tips" y garantías que se dejen.
 
 Existen otras posibles vías de negocio:
 - La prestación de servicios complementarios como pueden ser hacer "escrow" o actuar como DAO de arbitraje.
