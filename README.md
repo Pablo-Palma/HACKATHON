@@ -18,4 +18,10 @@ Un ejemplo concreto podría ser una web3. Su equipo de desarrollo pueden publica
 Por otro lado, en la que un actor malicioso sustituye el contrato con el que el usuario interactúa con la finalidad de apoderarse de sus fondos. Si el usuario comprueba la reputación del nuevo contrato verá diversas banderas rojas: que tiene recientes comentarios negativos, que los comentarios son solo nuevos, o que no tiene "colateral" del equipo de desarrollo.
 
 # Modelo de negocio
-El modelo de negocio consiste en cobrar un porcentaje de comisión de los "tips" que se dejen; y, en el futuro, de la prestación de servicios complementarios como pueden ser hacer "escrow" o actuar como DAO de arbitraje. Igualmente, el contrato inteligente puede funcionar como oráculo de reputación cobrar una comisión por cada consulta que le hagan otros contratos inteligentes.
+El modelo de negocio consiste en cobrar un porcentaje de comisión de los "tips" que se dejen.
+
+Existen otras posibles vías de negocio:
+- La prestación de servicios complementarios como pueden ser hacer "escrow" o actuar como DAO de arbitraje.
+- Que el contrato inteligente funcione como oráculo de reputación cobrar una comisión por cada consulta que le hagan otros contratos inteligentes. Por ejemplo: un contrato inteligencia que quiera dar un prestamo "under collateralized" siempre que el usuario tenga buena reputación.
+- Publicidad en la web.
+- Análisis de opiniones por IA.
