@@ -23,6 +23,7 @@ Por otro lado, en la que un actor malicioso sustituye el contrato con el que el 
 El modelo de negocio consiste en cobrar un porcentaje de comisión de los "tips" y garantías que se dejen.
 
 Existen otras posibles vías de negocio:
+- Préstamo (onchain) de los tips depositados en nuestro contrato en un protocolo como Aave para generar intereses.
 - La prestación de servicios complementarios como pueden ser hacer "escrow" o actuar como DAO de arbitraje.
 - Que el contrato inteligente funcione como oráculo de reputación cobrar una comisión por cada consulta que le hagan otros contratos inteligentes. Por ejemplo: un contrato inteligencia que quiera dar un prestamo "under collateralized" siempre que el usuario tenga buena reputación.
 - Publicidad en la web.
