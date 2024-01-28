@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.23;
+pragma solidity 0.8.19;
 
 import "forge-std/Script.sol";
 import "../src/Integrate.sol";
@@ -10,7 +10,7 @@ contract Deploy is Script {
 
         uint256 privKey = vm.envUint("PRIVATE_KEY_PROD");
 
-        vm.startBroadcast(vm.addr(privKey));
+        vm.startBroadcast(privKey);
 
         runDeploy();
 
