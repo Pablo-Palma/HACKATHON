@@ -1,0 +1,112 @@
+---
+import {consoleLogDestination} from "astro/dist/core/logger/console";
+export interface ReviewCard {
+    addr: string;
+    stars: number,
+    date: string,
+    desc: string,
+    imgs: [string],
+    tips: string,
+    countertips: number
+}
+const {props}: ReviewCard = Astro.props
+---
+
+<div class="card">
+    <div class="header">
+        <p class="addr">
+            {props.addr}
+        </p>
+        <img src="/white_star.svg" class="star"/>
+        <p>
+            {props.stars}
+        </p>
+        <p class="date">
+            {props.date}
+        </p>
+    </div>
+    <p class="desc">
+        {props.desc}
+    </p>
+    <div class="imgs">
+        {props.imgs.map((img) => (
+            <img src={img}/>
+        ))}
+    </div>
+    <div class="tipsWrapper">
+        <div class="tips">
+            <img src="/like.svg"/>
+            <p>
+                {props.countertips} r₿
+            </p>
+        </div>
+        <div class="countertips">
+            <img src="/dislike.svg"/>
+            <p>
+                {props.tips} r₿
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        background-color: rgba(237, 250, 255, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 30px;
+        margin: 10px 0;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0;
+    }
+    .header .date {
+        margin-left: auto;
+    }
+    .star {
+        height: 20px;
+        width: 20px;
+    }
+    .addr {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .imgs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+    }
+    .imgs img {
+        border-radius: 5px;
+    }
+    .tipsWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+    .tips, .countertips {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .tips img, .countertips img {
+        height: 25px;
+        width: 25px;
+    }
+    .tips:hover, .countertips:hover {
+        filter: drop-shadow(0 0 10px rgba(27, 212, 237, 0.7));
+    }
+    .countertips p, .tips p{
+        font-size: 20px;
+    }
+</style>

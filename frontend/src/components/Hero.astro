@@ -1,0 +1,71 @@
+---
+import Button from "./Button.astro";
+---
+<section>
+    <div class="splash">
+        <img src="/background.jpg" id="background" />
+        <img src="/integrate.svg" class="integrate" />
+    </div>
+    <div class="details">
+        <img src="/estrellita.png"/>
+        <h3>
+            Increasing confidence with blockchain
+        </h3>
+        <h5>
+            Your reviews, now authentic, secure, and transparent.
+        </h5>
+    </div>
+    <div class="btn">
+        <Button content="Launch dApp" href="/reviews" />
+    </div>
+</section>
+
+<style>
+    #background {
+        mix-blend-mode: color-burn;
+        width: 100%;
+        height: auto;
+    }
+    .splash {
+        width: 100%;
+        height: 700px;
+        position: relative;
+    }
+    .splash .integrate {
+        width: 1000px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(-50%,-70%);
+            filter: drop-shadow(0 0 100px rgba(27, 212, 237, 0.7));
+        }
+        50% {
+            transform: translate(-50%, -60%);
+            filter: drop-shadow(0 0 10px rgba(27, 212, 237, 0.7));
+        }
+        100% {
+            transform: translateY(-50%,-70%);
+            filter: drop-shadow(0 0 100px rgba(27, 212, 237, 0.7));
+        }
+    }
+    .details {
+        position: relative;
+        text-align: center;
+        padding-top: 200px;
+    }
+    .details img{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -70%);
+        animation: float 4s infinite ease-in-out;
+    }
+    .btn {
+        margin: 40px auto;
+        width: fit-content;
+    }
+</style>

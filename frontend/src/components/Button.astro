@@ -1,0 +1,27 @@
+---
+const {content, href} = Astro.props
+---
+
+<a href={href}>
+<button>
+        {content}
+</button>
+</a>
+
+<style>
+    button {
+        background: linear-gradient(#051633, #051633) padding-box,
+        linear-gradient(to right,  rgba(27, 212, 237, 0.7), rgb(23, 56, 114)) border-box;
+        padding: 5px 15px;
+        border-radius: 50em;
+        border: 3px solid transparent;
+        display: block;
+        font-size: 24px;
+        transition: all 0.1s ease-out;
+        width: fit-content;
+        height: fit-content;
+    }
+    button:hover {
+        box-shadow: 0 0 25px rgba(27, 212, 237, 0.7);
+    }
+</style>

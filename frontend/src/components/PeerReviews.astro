@@ -1,0 +1,49 @@
+---
+const {addr, description} = Astro.props
+---
+
+<div class="peerReview">
+  <div class="header">
+    <p class="addr">{addr}</p>
+    <a>
+      See more
+    </a>
+  </div>
+  <p>{description}</p>
+</div>
+
+<style>
+  .peerReview {
+    background-color: rgba(237, 250, 255, 0.1);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    animation: slideInFromLeft ease 1s;
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+  }
+  .addr {
+    font-weight: bold;
+    margin-bottom: 5px;
+    opacity: 0.4;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    color: #4DE5FF;
+    text-decoration: underline;
+  }
+</style>

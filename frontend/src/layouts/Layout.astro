@@ -10,12 +10,14 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Integrate: Services for trustness" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-	</head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">	</head>
 	<body>
 		<slot />
 	</body>
@@ -33,19 +35,26 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		color: #ffffff;
+		background: #020E22;
 		background-size: 224px;
+		font-size: 16px;
+		font-family: 'Kumbh Sans', sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	h1 {
+		font-size: 121.44px;
+		font-weight: bold;
+	}
+	h3 {
+		font-size: 54.08px;
+		font-weight: bold;
+	}
+	h4 {
+		font-size: 36px;
+		font-weight: bold;
+	}
+	h5 {
+		font-size: 24px;
+		font-weight: bold;
 	}
 </style>

@@ -1,0 +1,78 @@
+<footer>
+    <div class="info">
+        <img class="logo" src="/integrate.svg">
+        <p>Integrate is a cutting-edge blockchain platform reshaping digital trust. It decentralizes online reputation, enhances security through smart contract verification, and ensures integrity with an arbitration DAO.</p>
+    </div>
+    <div class="contact">
+        <h4>Need Something?</h4>
+        <div class="input">
+            <p>
+                Send us an email
+            </p>
+            <button onclick="location.href='mailto:rubens314@gmail.com';">Send</button>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        box-shadow: inset 0 0 20px #020E22, 0 0 30px rgba(27, 212, 237, 0.3);
+        background-color: #020E22;
+        padding: 60px 120px;
+        text-align: center;
+        z-index: 100;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 240px;
+        margin-top: 300px;
+
+    }
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+    .info p {
+        opacity: 0.5;
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    .contact {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .input {
+        width: 60%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 30px;
+        box-shadow: inset 0 0 20px #020E22, 0 0 30px rgba(27, 212, 237, 0.3);
+        display: flex;
+    }
+    .input p {
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+        padding: 10px;
+        opacity: 0.5;
+    }
+    .input button {
+        background-color: #1BD4ED;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 30px;
+        color: #020E22;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .input button:hover {
+        box-shadow: 0 0 30px rgba(27, 212, 237, 0.3);
+
+        background-color: #61e0f3;
+    }
+
+</style>

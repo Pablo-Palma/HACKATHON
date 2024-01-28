@@ -1,0 +1,46 @@
+---
+import TeamMember from "./TeamMember.astro";
+---
+<section>
+    <div class="header">
+        <img class="icon" src="/white_star.svg">
+        <h3>
+            About Us
+        </h3>
+    </div>
+    <div class="team">
+        <TeamMember name="Rubens Sánchez" role="Lawyer / Founder" image="/team/rubens.jpeg" />
+        <TeamMember name="Pablo Palma" role="Software Developr / Co-Founder" image="/team/pablo.jpeg" />
+        <TeamMember name="César Escribano" role="Blockchain Developer" image="/team/cesar.jpg" />
+        <TeamMember name="Marina Higueras" role="UI/UX Designer" image="/team/boba.jpeg" />
+        <TeamMember name="Xander" role="Full-Stack Developer" image="/team/xander.jpeg" />
+    </div>
+</section>
+
+<style>
+    .icon {
+        height: 60px;
+        width: 60px;
+        filter: drop-shadow(0 0 10px #4DE5FF );
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 200px;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    section {
+        margin: 120px auto;
+        width: 80vw;
+        position: relative;
+        overflow: visible;
+    }
+    .team {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+</style>

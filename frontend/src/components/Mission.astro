@@ -1,0 +1,87 @@
+<section>
+    <div>
+        <div class="header">
+            <img class="icon" src="/white_star.svg">
+            <h3>
+                Our Mission
+            </h3>
+        </div>
+        <div class="body">
+            <h4>
+                Protect and Empower Consumers
+            </h4>
+            <h5>
+                Transparency helps consumers make informed decisions about which companies to support.
+            </h5>
+            <hr>
+            <h4>
+                Legitimize Your Business
+            </h4>
+            <h5>
+                Certify the reliability of your own positive reputation with a clean Transparency Report.
+            </h5>
+        </div>
+    </div>
+    <img class="img" src="/mission.png">
+</section>
+
+<style>
+    section {
+        margin: 120px auto;
+        width: 80vw;
+        position: relative;
+        overflow: visible;
+    }
+    section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 50%;
+    }
+    section > img {
+        position: absolute;
+        right: -10%;
+        top: -10%;
+        object-position: center;
+        overflow: visible;
+        animation: float3 3s infinite;
+    }
+    @keyframes float3 {
+        0% {
+            transform: rotate(0deg) translate(0, 0);
+        }
+        50% {
+            transform: rotate(5deg) translate(0, 10px);
+        }
+        100% {
+            transform: rotate(0deg) translate(0, 0);
+        }
+    }
+    .icon {
+        height: 60px;
+        width: 60px;
+        filter: drop-shadow(0 0 10px #4DE5FF );
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    hr {
+        background-color: #A5F7FF;
+        height: 4px;
+        border-radius:4px;
+        border: none;
+        box-shadow: 0 0 20px 1px #4DE5FF;
+    }
+    hr {
+        margin: 60px 0;
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+</style>

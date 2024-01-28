@@ -1,0 +1,112 @@
+---
+import PeerReviews from "./PeerReviews.astro";
+import ProgressBar from "./ProgressBar.astro";
+import Button from "./Button.astro";
+import ReviewCard from "./ReviewCard.astro";
+
+const pet = await fetch()
+const res = await pet.json()
+
+---
+<section>
+    <form>
+    <label for="write">
+        <textarea name="write" id="write" rows="2" placeholder="Write a review..."></textarea>
+    </label>
+    </form>
+    <h5>
+        Your contacts have shared reviews!
+    </h5>
+    <PeerReviews addr="0x52...a31b" description="Xander es un gran profesional. He confiado en su criterio y m..." />
+    <PeerReviews addr="0x77...5636" description="Buenos servicios y calidad acorde a la experiencia. Repetiré co..." />
+    <div class="rating">
+        <div class="header">
+            <h3>Reviews</h3>
+            <img src="/white_star.svg" />
+            <h4>3.0</h4>
+        </div>
+        <div class="bars">
+            <ProgressBar pctg="37%" stars="5" />
+            <ProgressBar pctg="4%" stars="4" />
+            <ProgressBar pctg="3%" stars="3" />
+            <ProgressBar pctg="3%" stars="2" />
+            <ProgressBar pctg="53%" stars="1" />
+        </div>
+        <div class="reviews">
+            <Button content="Sort by: Most voted" />
+            <ReviewCard props={{
+                addr: "0x52...a31b      (marina.rsk)",
+                stars: "2",
+                date: "23 Jan 2024",
+                desc: "Experiencia poco agradable con Xander, contraté sus servicios y quedé un poco disgustada con los resultados. Fue muy rápido pero la calidad no era la que estaba buscando.",
+                imgs: [
+                    "https://i.pinimg.com/originals/6b/5f/99/6b5f99599fb9d708bd57e5586e4093dc.jpg",
+                    "https://i.pinimg.com/originals/cf/c3/61/cfc361a8c6d99c2271f7836d6c837b2f.jpg",
+                    "https://i.pinimg.com/originals/2f/77/34/2f7734b5d112216ee6d697458deaf63b.jpg",
+                ],
+                tips: 0.004713,
+                countertips: 0.003894
+
+            }} />
+            <ReviewCard props={{
+                addr: "0x77...5636      (rubens.rsk)",
+                stars: "5",
+                date: "17 Jan 2024",
+                desc: "Estoy satisfecho con Xander. Gracias por el trabajo realizado. Excelente servicio.",
+                imgs: [
+                    "https://i.pinimg.com/originals/a3/79/43/a37943c973dbb51983a21061979f8d7e.png",
+                    "https://i.pinimg.com/originals/63/03/ef/6303ef668ae9c78f1c0edcaba1eac636.jpg",
+                    "https://cdntattoofilter.com/tattoo/315511/l.jpg",
+                ],
+                tips: 0.0002545,
+                countertips: 0.00002545
+
+            }} />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    textarea {
+        background-color: #A5F7FF;
+        color: #020E22;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease-out;
+        width: 100%;
+        resize: none;
+    }
+    textarea::placeholder {
+        color: rgba(2, 14, 34, 0.7);
+    }
+    textarea:focus {
+        outline: none;
+        box-shadow: 0 0 25px rgba(27, 212, 237, 0.7);
+    }
+    label {
+        font-size: 24px;
+    }
+    .header {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+    .header img {
+        width: 40px;
+        height: 40px;
+    }
+    .bars {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .reviews {
+        margin: 30px 0;
+    }
+</style>

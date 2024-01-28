@@ -1,0 +1,64 @@
+---
+import Button from "./Button.astro";
+export interface BannerProps {
+    image: string,
+    name: string,
+    description: string,
+    stars: number,
+    nOpinions: number
+}
+const {props}: BannerProps = Astro.props
+---
+<section>
+    <img src={props.image} alt={props.name} class="logo"/>
+    <div class="info">
+        <h3>{props.name}</h3>
+        <p>{props.description}</p>
+        <div class="star_container">
+            {Array.from({length: props.stars}).map(() => <img src="/star.svg" class="star"/>)}
+        </div>
+        <h5>{props.nOpinions} Opinions · {
+            props.stars >= 5 ? "Excellent"
+                :props.stars == 4 ? "Good"
+                :props.stars == 3 ? "Regular"
+                :props.stars == 2 ? "Bad"
+                :"Very bad"
+        }</h5>
+        <p>
+            Verified business
+        </p>
+    </div>
+    <div class="btn">
+        <Button content="0xb3a824b5...8eb17db009" href="https://www.google.com"/>
+    </div>
+</section>
+
+<style>
+    section {
+        width: 100%;
+        display: flex;
+        gap: 45px;
+        align-items: center;
+    }
+    .logo {
+        height: 250px;
+        width: 250px;
+        overflow: clip;
+        border-radius: 5px;
+    }
+    .star {
+        width: 20px;
+    }
+    .star_container {
+        display: flex;
+        gap: 5px;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn {
+        margin-left: auto;
+    }
+</style>

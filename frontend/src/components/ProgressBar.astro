@@ -1,0 +1,51 @@
+---
+const { stars, pctg } = Astro.props
+---
+
+<div class="full">
+    <img src="/white_star.svg" />
+    <h5>{stars}</h5>
+    <div class="background">
+        <div style=`width: ${pctg}` class="progress">
+        </div>
+    </div>
+    <h5>{pctg}</h5>
+</div>
+
+<style define:vars={{
+    size: `${pctg}`,
+}}>
+    img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    .full {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .background {
+        width: 100%;
+        height: 15px;
+        background-color: rgba(217, 217, 217, 0.3);
+        border-radius: 10px;
+    }
+    .progress {
+        height: 100%;
+        background-color: #A5F7FF;
+        border-radius: 10px;
+        animation: progress 1s ease-in-out;
+        width: var(--size);
+    }
+    @keyframes progress {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: var(--size)
+        }
+    }
+</style>

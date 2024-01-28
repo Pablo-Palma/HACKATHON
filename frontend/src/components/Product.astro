@@ -1,0 +1,92 @@
+---
+import Button from "./Button.astro";
+---
+<section>
+    <div>
+        <div class="header">
+            <img class="icon" src="/white_star.svg">
+            <h3>
+                What we offer
+            </h3>
+        </div>
+        <div class="body">
+            <h5>
+                At Integrate, we redefine online trust through a revolutionary blockchain-based platform. We address the challenge of online reputation by decentralizing ownership, giving users full control over how they are perceived in various digital contexts.
+            </h5>
+            <hr>
+            <h5>
+                You not only get a tool to build and maintain a strong reputation but also an additional layer of security for your transactions and smart contracts. Join a community that values transparency, security, and trust in the digital world.
+            </h5>
+            <div class="btn">
+                <Button href="/reviews" content="Launch dApp"></Button>
+            </div>
+        </div>
+    </div>
+    <img class="img" src="/product.png">
+</section>
+
+<style>
+    section {
+        margin: 120px auto;
+        width: 80vw;
+        position: relative;
+        overflow: visible;
+    }
+    section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 50%;
+        margin-left: auto;
+    }
+    section > img {
+        position: absolute;
+        left: -20%;
+        top: -25%;
+        object-position: center;
+        overflow: visible;
+        animation: float2 3s infinite;
+        z-index: -1;
+    }
+    @keyframes float2 {
+        0% {
+            transform: rotate(0deg) scale(1.5) translate(0, 0);
+        }
+        50% {
+            transform: rotate(5deg) scale(1.5) translate(0, 10px);
+        }
+        100% {
+            transform: rotate(0deg) scale(1.5) translate(0, 0);
+        }
+    }
+    .icon {
+        height: 60px;
+        width: 60px;
+        filter: drop-shadow(0 0 10px #4DE5FF );
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    hr {
+        background-color: #A5F7FF;
+        height: 4px;
+        border-radius:4px;
+        border: none;
+        box-shadow: 0 0 20px 1px #4DE5FF;
+    }
+    hr {
+        margin: 60px 0;
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn {
+        margin: 60px auto;
+    }
+
+</style>

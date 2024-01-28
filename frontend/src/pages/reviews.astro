@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Banner from "../components/Banner.astro";
+import ReviewsSide from "../components/ReviewsSide.astro";
+import AboutSide from "../components/AboutSide.astro";
+---
+<Layout title="Xander - Peers reviews">
+    <Navbar />
+    <main>
+        <Banner props={{
+            name: "Xander Ink",
+            description: "Tatoo Studio",
+            stars: 3,
+            nOpinions: 110,
+            image: "/images/xander.webp"
+        }} />
+    </main>
+    <div class="viewer">
+        <ReviewsSide />
+        <AboutSide />
+    </div>
+</Layout>
+
+<style>
+    main {
+        width: 80vw;
+        margin: 150px auto 50px auto;
+    }
+    .viewer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
+        width: 80vw;
+        margin: 0 auto;
+    }
+</style>
