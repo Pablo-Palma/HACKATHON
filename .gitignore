@@ -1,0 +1,12 @@
+# Compiler
+cache/
+out/
+bin/
+broadcast/
+.env
+
+# Docs
+docs/
+
+# Dapp
+tmp/
