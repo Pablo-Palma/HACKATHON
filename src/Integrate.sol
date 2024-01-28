@@ -20,7 +20,7 @@ contract Integrate {
 		uint256 identifier;
 		uint256 timestamp;
 		uint256 tipsBalance;
-		string[64] metadataHash;
+		string metadataHash;
 	}
 
 	address owner;
@@ -51,7 +51,7 @@ contract Integrate {
 		address wallet_in,
 		uint8 rating,
 		uint256 identifier,
-		string[64] calldata metadataHash) public returns (uint256) {
+		string calldata metadataHash) public returns (uint256) {
 
 		require(wallet_out != wallet_in, "Wallets must be different");
 		require(rating >= 1 && rating <= 5, "Rating must be between 0 and 5");
