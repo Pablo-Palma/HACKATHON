@@ -17,9 +17,9 @@ contract Integrate {
 		address sender;
 		address wallet_out;
 		address wallet_in;
-		uint256 identifier;
 		uint256 timestamp;
 		uint256 tipsBalance;
+		string identifier;
 		string metadataHash;
 	}
 
@@ -38,6 +38,10 @@ contract Integrate {
 		uint8 rating
 	);
 
+	error InvalidFeedbackType();
+	error InvalidRating();
+	error EmptyIdentifier();
+
 	constructor() {
 		owner = msg.sender;
 	}
@@ -50,12 +54,20 @@ contract Integrate {
 		address wallet_out,
 		address wallet_in,
 		uint8 rating,
-		uint256 identifier,
+		string calldata identifier,
 		string calldata metadataHash) public returns (uint256) {
 
+		if (feedbackType != FeedbackType.ONCHAIN && feedbackType != FeedbackType.OFFCHAIN) {
+			revert InvalidFeedbackType();
+		}
+		if(rating < 1 || rating > 5) {
+			revert InvalidRating();
+		}
+		if(bytes(identifier).length == 0) {
+			revert EmptyIdentifier();
+		}
 		require(wallet_out != wallet_in, "Wallets must be different");
-		require(rating >= 1 && rating <= 5, "Rating must be between 0 and 5");
-		require(feedbackType == FeedbackType.ONCHAIN || feedbackType == FeedbackType.OFFCHAIN, "Feedback type must be ONCHAIN or OFFCHAIN");
+		require(msg.sender == wallet_out || msg.sender == wallet_in, "Sender must be one of the wallets");
 
 		uint256 feedbackId = feedbacks.length;
 
@@ -66,9 +78,9 @@ contract Integrate {
 			sender: msg.sender,
 			wallet_out: wallet_out,
 			wallet_in: wallet_in,
-			identifier: identifier,
 			timestamp: block.timestamp,
 			tipsBalance: 0,
+			identifier: identifier,
 			metadataHash: metadataHash
 		});
 
