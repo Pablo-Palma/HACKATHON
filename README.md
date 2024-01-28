@@ -28,3 +28,10 @@ Existen otras posibles vías de negocio:
 - Que el contrato inteligente funcione como oráculo de reputación cobrar una comisión por cada consulta que le hagan otros contratos inteligentes. Por ejemplo: un contrato inteligencia que quiera dar un prestamo "under collateralized" siempre que el usuario tenga buena reputación.
 - Publicidad en la web.
 - Análisis de opiniones por IA.
+
+# Contratos
+
+## Polygon Mumbai:
+
+Integrate:
+[0x86E75C083AdA3CA076EB80Efa521Ace39FfA29C6](https://mumbai.polygonscan.com//address/0x86E75C083AdA3CA076EB80Efa521Ace39FfA29C6)
